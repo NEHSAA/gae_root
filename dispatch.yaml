@@ -1,0 +1,3 @@
+dispatch:
+  - url: "barcode.nehsaa.tw/"
+    service: barcode-gen

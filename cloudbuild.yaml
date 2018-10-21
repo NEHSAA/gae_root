@@ -1,0 +1,8 @@
+steps:
+- id: update-route
+  name: 'gcr.io/cloud-builders/gcloud'
+  args: ['app', 'deploy', '-v', '$SHORT_SHA', 'dispatch.yaml']
+- id: deploy-default
+  name: 'gcr.io/cloud-builders/gcloud'
+  dir: 'default'
+  args: ['app', 'deploy', '-v', '$SHORT_SHA', 'app.yaml']
